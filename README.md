@@ -36,17 +36,21 @@ pip install torch torchvision supervision opencv-python
 
 ### Steps in the Notebook
 
-1. **Video Loading**:
+1. **Setup Environment**:
+   The first cell contains the code to install SAM2 and its dependencies. Ensure to enable GPU acceleration in Google Colab for faster processing (`Runtime > Change runtime type > Hardware accelerator > GPU`).
+
+2. **Video Loading**:
    The script reads the input video and extracts frames for processing.
 
-2. **Mask Generation**:
+3. **Mask Generation**:
    SAM2 generates segmentation masks for hand movements in each frame.
 
-3. **Visualization**:
+4. **Visualization**:
    Outputs a video or visualizations of the generated masks overlaid on the original frames.
 
-4. **Export Results**:
+5. **Export Results**:
    The processed video with masks is saved as `output_video.mp4` in the project directory.
+
 
 ## Google Colab
 Run the project directly in Google Colab by using the following link:
