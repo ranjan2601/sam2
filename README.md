@@ -1,4 +1,3 @@
-
 # Hand Movement Masking Using SAM2, Torch, and Torchvision
 
 ## Features
@@ -30,7 +29,7 @@ pip install torch torchvision supervision opencv-python
    cd sam2
    ```
 
-2. Upload your video file  to the project directory.
+2. Upload your video file to the project directory.
 
 3. Run the `hand_movement.ipynb` file on Google Colab or your local Jupyter Notebook environment.
 
@@ -45,14 +44,14 @@ pip install torch torchvision supervision opencv-python
 3. **Mask Generation**:
    SAM2 generates segmentation masks for hand movements in each frame.
 
-4. **Visualization**:
+4. **Hand Position Localization**:
+   After obtaining the boundary boxes for hands in each frame, the center of the bounding box (center of x and y) is calculated. This center point is then used to locate the hand position for further implementation with SAM2.
+
+5. **Visualization**:
    Outputs a video or visualizations of the generated masks overlaid on the original frames.
 
-5. **Export Results**:
+6. **Export Results**:
    The processed video with masks is saved as `output_video.mp4` in the project directory.
-
 
 ## Google Colab
 Run the project directly in Google Colab by using the following link: https://colab.research.google.com/drive/1fLbNTUbDy3339KozfeQPAEC9JrcY0KTc?usp=sharing
-
-
