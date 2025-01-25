@@ -55,6 +55,6 @@ pip install torch torchvision supervision opencv-python
 ## Google Colab
 Run the project directly in Google Colab by using the following link:
 
-[Open in Google Colab]([https://colab.research.google.com/](https://colab.research.google.com/drive/1fLbNTUbDy3339KozfeQPAEC9JrcY0KTc?usp=sharing))
+[Open in Google Colab]([(https://colab.research.google.com/drive/1fLbNTUbDy3339KozfeQPAEC9JrcY0KTc?usp=sharing)])
 
 
