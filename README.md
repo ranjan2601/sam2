@@ -1,3 +1,4 @@
+
 # Hand Movement Masking Using SAM2, Torch, and Torchvision
 
 ## Features
@@ -9,7 +10,7 @@
 ## Requirements
 Ensure the following dependencies are installed:
 
-- Python 3.8+
+- Python 3.12
 - torch
 - torchvision
 - supervision
@@ -24,34 +25,35 @@ pip install torch torchvision supervision opencv-python
 ## Getting Started
 
 1. Clone the repository:
-   ```bash
+   
+```bash
    git clone https://github.com/ranjan2601/sam2.git
    cd sam2
-   ```
+```
 
 2. Upload your video file to the project directory.
 
-3. Run the `hand_movement.ipynb` file on Google Colab or your local Jupyter Notebook environment.
+3. Run the hand_movement.ipynb file on Google Colab or your local Jupyter Notebook environment.
 
 ### Steps in the Notebook
 
 1. **Setup Environment**:
-   The first cell contains the code to install SAM2 and its dependencies. Ensure to enable GPU acceleration in Google Colab for faster processing (`Runtime > Change runtime type > Hardware accelerator > GPU`).
+   The first cell contains the code to install SAM2 and its dependencies. Ensure to enable GPU acceleration in Google Colab for faster processing (Runtime > Change runtime type > Hardware accelerator > GPU).
 
 2. **Video Loading**:
    The script reads the input video and extracts frames for processing.
 
-3. **Mask Generation**:
-   SAM2 generates segmentation masks for hand movements in each frame.
+3. **Hand Position Localization**:
+   After extracting the frames, bounding boxes for hands are detected. The center of each bounding box (calculated as the center of x and y) is used to localize the hand positions for subsequent mask generation.
 
-4. **Hand Position Localization**:
-   After obtaining the boundary boxes for hands in each frame, the center of the bounding box (center of x and y) is calculated. This center point is then used to locate the hand position for further implementation with SAM2.
+4. **Mask Generation**:
+   SAM2 uses the localized hand positions to generate segmentation masks for hand movements in each frame.
 
 5. **Visualization**:
    Outputs a video or visualizations of the generated masks overlaid on the original frames.
 
 6. **Export Results**:
-   The processed video with masks is saved as `output_video.mp4` in the project directory.
+   The processed video with masks is saved as output_video.mp4 in the project directory.
 
 ## Google Colab
-Run the project directly in Google Colab by using the following link: https://colab.research.google.com/drive/1fLbNTUbDy3339KozfeQPAEC9JrcY0KTc?usp=sharing
+Run the project directly in Google Colab by using the following link: [Google Colab Link](https://colab.research.google.com/drive/1fLbNTUbDy3339KozfeQPAEC9JrcY0KTc?usp=sharing)
